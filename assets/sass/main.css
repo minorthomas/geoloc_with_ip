@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+*::first-letter {
+  text-transform: uppercase;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  padding: 1px;
+}
+
+::-webkit-scrollbar-track {
+  padding: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(0deg, 0%, 59%);
+  border-radius: 4px;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=search] {
+  border: none;
+}
+input[type=search]:focus {
+  outline: none;
+}
+
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  display: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.homeheader {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+}
+.homeheader img {
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: -1;
+  height: 15.6em;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.homeheader h1 {
+  color: #FFF;
+  font-weight: 400;
+  font-size: 1.5em;
+  margin-top: 1em;
+}
+.homeheader div {
+  display: flex;
+  flex-direction: row;
+  padding: 0 1em;
+  width: 100%;
+  max-width: 35em;
+  justify-content: center;
+}
+.homeheader div input {
+  background-color: #FFF;
+  border-radius: 1em 0 0 1em;
+  height: 3.5em;
+  width: 100%;
+  padding: 1em;
+  font-size: 1em;
+}
+.homeheader div input:-moz-placeholder-shown {
+  text-overflow: ellipsis;
+}
+.homeheader div input:-ms-input-placeholder {
+  text-overflow: ellipsis;
+}
+.homeheader div input:placeholder-shown {
+  text-overflow: ellipsis;
+}
+.homeheader div button {
+  background-color: #000;
+  border-radius: 0 1em 1em 0;
+  padding: 0 1.3em;
+}
+
+.homemain {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.homemain_list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #FFF;
+  border-radius: 1em;
+  padding: 1.5em 4em;
+  margin: 0 1em;
+  gap: 1.5em;
+  max-width: 50em;
+  width: 100%;
+  z-index: 1;
+}
+@media only screen and (min-width: 576px) {
+  .homemain_list {
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2em;
+    height: 8.5em;
+  }
+}
+.homemain_list h2 {
+  font-size: 0.5em;
+  margin-bottom: 0.7em;
+  color: hsl(0deg, 0%, 59%);
+  font-weight: 500;
+  letter-spacing: 0.2em;
+}
+@media only screen and (min-width: 576px) {
+  .homemain_list h2 {
+    font-size: 0.65em;
+  }
+}
+.homemain_list p {
+  font-weight: 700;
+  font-size: 1em;
+}
+@media only screen and (min-width: 576px) {
+  .homemain_list p {
+    font-size: 1.2em;
+  }
+}
+.homemain_map {
+  position: absolute;
+  left: 0;
+  top: 8.5em;
+  width: 100%;
+  height: 50em;
+  z-index: 0;
+}
+.homemain_map .leaflet-control-attribution {
+  display: flex;
+  gap: 0.6em;
+}/*# sourceMappingURL=main.css.map */

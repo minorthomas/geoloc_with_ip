@@ -1,0 +1,126 @@
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.homeheader {
+    object-fit: cover;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+
+    img {
+        left: 0;
+        top: 0;
+        position: absolute;
+        z-index: -1;
+        height: 15.6em;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    h1 {
+        color: $white;
+        font-weight: $regular;
+        font-size: 1.5em;
+        margin-top: 1em;
+    }
+
+    div {
+        display: flex;
+        flex-direction: row;
+        padding: 0 1em;
+        width: 100%;
+        max-width: 35em;
+        justify-content: center;
+
+        input {
+            background-color: $white;
+            border-radius: 1em 0 0 1em;
+            height: 3.5em;
+            width: 100%;
+            padding: 1em;
+            font-size: $fontsize;
+
+            &:placeholder-shown {
+                text-overflow: ellipsis;
+            }
+        }
+
+        button {
+            background-color: $dark;
+            border-radius: 0 1em 1em 0;
+            padding: 0 1.3em;
+        }
+    }
+}
+
+.homemain {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &_list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: $white;
+        border-radius: 1em;
+        padding: 1.5em 4em;
+        margin: 0 1em;
+        gap: 1.5em;
+        max-width: 50em;
+        width: 100%;
+        z-index: 1;
+
+        @include device-size("small") {
+            flex-direction: row;
+            text-align: left;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 2em;
+            height: 8.5em;
+        }
+
+        h2 {
+            font-size: 0.5em;
+            margin-bottom: 0.7em;
+            color: $darkgrey;
+            font-weight: $medium;
+            letter-spacing: 0.2em;
+
+            @include device-size("small") {
+                font-size: 0.65em;
+            }
+        }
+
+        p {
+            font-weight: $bold;
+            font-size: $fontsize;
+
+            @include device-size("small") {
+                font-size: 1.2em;
+            }
+        }
+    }
+
+    &_map {
+        position: absolute;
+        left: 0;
+        top: 8.5em;
+        width: 100%;
+        height: 50em;
+        z-index: 0;
+
+        .leaflet-control-attribution {
+            display: flex;
+            gap: 0.6em;
+        }
+    }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
+
+    <link rel="stylesheet" href="assets/sass/main.css" />
+
+    <!-- MAP -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+        integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+        integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+
+
+    <title>IP Tracker</title>
+</head>
+
+<body>
+    <header class="homeheader">
+        <img src="assets/images/pattern-bg.png" alt="background" />
+        <h1>IP Address Tracker</h1>
+        <div>
+            <input type="search" id="search-ip" name="search-ip" placeholder="Search for any IP address or domain" />
+            <button id="button-search-ip">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14">
+                    <path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6" />
+                </svg>
+            </button>
+        </div>
+    </header>
+    <main class="homemain">
+        <ul class="homemain_list">
+            <li>
+                <h2>IP ADDRESS</h2>
+                <p id="ipaddress">-- --</p>
+            </li>
+            <li>
+                <h2>LOCATION</h2>
+                <p id="location">-- --</p>
+            </li>
+            <li>
+                <h2>TIMEZONE</h2>
+                <p id=" timezone">-- --</p>
+            </li>
+            <li>
+                <h2>ISP</h2>
+                <p id="isp">-- --</p>
+            </li>
+        </ul>
+        <div class="homemain_map" id="map"></div>
+    </main>
+
+    <script type="module" src="scripts/map.js"></script>
+</body>
+
+</html>
